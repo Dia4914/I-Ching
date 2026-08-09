@@ -2,6 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>64卦計算器</title>
 
   <meta name="theme-color" content="#4f67d8">
@@ -14,10 +15,11 @@
   <meta name="apple-mobile-web-app-title" content="64卦計算器">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <style>
-    body {
-      font-family: sans-serif;
-      padding: 60px;
-      line-height: 2;
+  body {
+    font-family: sans-serif;
+    padding: 20px;
+    line-height: 1.8;
+    box-sizing: border-box;
     }
     .row {
       display: flex;
@@ -41,7 +43,49 @@
       color: #222;
       white-space: pre-line;
     }
-    
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .row {
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    margin-right: 0;
+  }
+
+  .result {
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  #questionInput {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+
+  #output {
+    font-size: 16px;
+    word-break: break-word;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}    
   </style>
 </head>
 <body>
@@ -62,7 +106,12 @@
 
 <!-- 新增輸入問題的欄位 -->
 <div class="row">
-  <textarea id="questionInput" placeholder="輸入你想問的問題" style="width: 500px; height: 80px; font-size: 16px; padding: 8px;" oninput="updateResults()"></textarea>
+ <textarea
+  id="questionInput"
+  placeholder="輸入你想問的問題"
+  style="width: 100%; max-width: 500px; height: 80px; font-size: 16px; padding: 8px; box-sizing: border-box;"
+  oninput="updateResults()">
+</textarea>
 </div>
 
 
