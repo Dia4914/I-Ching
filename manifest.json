@@ -3,8 +3,6 @@
   "short_name": "64卦計算器",
   "start_url": "https://dia4914.github.io/I-Ching/64.html",
   "display": "standalone",
-  "background_color": "#f4f6fb",
-  "theme_color": "#4f67d8",
   "icons": [
     {
       "src": "icon.png",
